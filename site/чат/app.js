@@ -179,32 +179,45 @@ function sendMessage() {
 
         
 
-        socket.onmessage = async function(event) {
-            const audioPromises = [];
-            const blob = new Blob([event.data], { type: 'audio/wav' });
-            const audioURL = URL.createObjectURL(blob);
-            let currentAudioPromise = Promise.resolve();
-          
-            currentAudioPromise = currentAudioPromise.then(async function() {
-              await audioPromises.shift()();
-              return playAudio(audioURL);
-            }).catch(function(error) {
-              console.error("Error playing audio:", error);
-              return Promise.resolve();
-            });
-          
-            audioPromises.push(playAudio(audioURL));
-          };
-          
-          async function playAudio(audioURL) {
-            try {
-              const audio = new Audio();
-              audio.src = audioURL;
-              await audio.play();
-            } catch (error) {
-              console.error("Error playing audio:", error);
-            }
-          }
+        const audioPromises = [];
+
+// Обработчик сообщения WebSocket
+socket.onmessage = async function(event) {
+    const blob = new Blob([event.data], { type: 'audio/wav' });
+    const audioURL = URL.createObjectURL(blob);
+
+    // Создаём и добавляем новый промис в очередь
+    const newAudioPromise = async () => {
+        await playAudio(audioURL);
+    };
+
+    audioPromises.push(newAudioPromise);
+
+    // Если это первый элемент в очереди, начинаем воспроизведение
+    if (audioPromises.length === 1) {
+        await processQueue();
+    }
+};
+
+// Функция для воспроизведения аудио
+async function playAudio(audioURL) {
+    try {
+        const audio = new Audio();
+        audio.src = audioURL;
+        await audio.play();
+        await new Promise(resolve => audio.onended = resolve); // Ждём окончания воспроизведения
+    } catch (error) {
+        console.error("Error playing audio:", error);
+    }
+}
+
+// Функция для обработки очереди
+async function processQueue() {
+    while (audioPromises.length > 0) {
+        const currentAudioPromise = audioPromises.shift();
+        await currentAudioPromise();
+    }
+}
           
           
         
