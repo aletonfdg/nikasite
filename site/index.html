@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>NiKa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="heade" id="head">
+        <a href="index.html"><img id="ret" src="ret.svg" alt="nika"></a>
+        <div class="tooltip" id="hb">О нас
+            <span class="tooltiptext">Голосовой помощник “Ника” — это ваш личный ассистент нового поколения, который всегда под рукой. Он использует передовые технологии распознавания голоса и искусственного интеллекта, чтобы облегчить вашу повседневную жизнь. Ника может помочь вам управлять умным домом, напомнить о важных встречах, находить информацию в интернете и даже развлекать вас, когда вам скучно.</span>
+        </div>
+        <button onclick="scrollToClass2()" id="hb">Ника</button>
+        <button onclick='scrollToClass3()' id="hb">Пример работы</button>
+        <button onclick="scrollToClass()" id="hb">Функции</button>
+        <button onclick="scrollToClass4()" id="hb">Подддержка</button>
+        <a href="приложение умная станция/index.html" id="hb">Умная станция</a>
+        <a href="чат/nika.html" id="ah">Попробовать</a>
+    </div>
+    <div id="ni">
+        <div id="nik" class="nika">
+            <div id='texte'>
+                <div id="priv"></div>
+                <div id='iu'>
+                    <div id="dr"></div>
+                    <div id="dr2"></div>
+                </div>
+                <a href="чат/nika.html" id="ahe"></a>
+            </div>
+            <img alt="nika" height="45%" id="ic" src="3.svg">
+        </div>
+    </div>
+    <div class="func">
+        <img src="Group 20.jpg" width="100%">
+    </div>
+    <div class="prim">
+        <img src="Group 21.svg" width="100%">
+    </div>
+    <div class="pod">
+        <div id='te'>Где можно встретить</div>
+        <div class="podd">
+
+            <div class="1">
+                <a id="tg" href="https://web.telegram.org/k/#@chatbot_nika_bot">
+                    <img id="tg1" src="t.svg" alt="tg">
+                    <h1 id="tg2">@chatbot_nika_bot</h1>
+                </a>
+            </div>
+            <a id="play">
+                <img id="play1" src="7.svg">
+                <h1 id="play2">(Планируется)</h1>
+            </a>
+
+            <a id="apl">
+                <img id="apl1" src="8.svg">
+                <h1 id="play2">(Планируется)</h1>
+            </a>
+            <a id="app" href="чат/nika.html">
+                <img id="app1" src="6.svg">
+                <h1 id="play2">(подробнее)</h1>
+            </a>
+        </div>
+    </div>
+    <script>
+        var i = 0;
+        var y = 0;
+        var z = 0;
+        var x = 0;
+        var vanBan = 'Привет! Это Ника';
+        var vanBan2 = 'Голосовой помощник';
+        var vanBan3 = 'и ваш новый друг';
+        var vanBan4 = 'Попробовать';
+        var tocDo = 120;
+
+        function typeWriter() {
+            if (i < vanBan.length) {
+                document.getElementById("priv").innerHTML += vanBan.charAt(i);
+                i++;
+                setTimeout(typeWriter, tocDo);
+            }
+            if (y < vanBan2.length && i == vanBan.length) {
+                document.getElementById("dr").innerHTML += vanBan2.charAt(y);
+                y++;
+                setTimeout(typeWriter, tocDo);
+            }
+            if (z < vanBan3.length && y == vanBan2.length) {
+                document.getElementById("dr2").innerHTML += vanBan3.charAt(z);
+                z++;
+                setTimeout(typeWriter, tocDo);
+            }
+            if (x < vanBan4.length && z == vanBan3.length) {
+                document.getElementById("ahe").innerHTML += vanBan4.charAt(x);
+                x++;
+                setTimeout(typeWriter, tocDo);
+            }
+        }
+        typeWriter();
+
+        function scrollToClass() {
+            const targetClass = document.querySelector('.func');
+            if (targetClass) {
+                targetClass.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function scrollToClass2() {
+            const targetClass = document.querySelector('#ni');
+            if (targetClass) {
+                targetClass.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            typeWriter();
+        }
+
+        function scrollToClass3() {
+            const targetClass = document.querySelector('.prim');
+            if (targetClass) {
+                targetClass.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function scrollToClass4() {
+            const targetClass = document.querySelector('.pod');
+            if (targetClass) {
+                targetClass.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+body{
+    margin: 0;
+    -webkit-user-scalable: none;
+  -moz-user-scalable: none;
+  -ms-user-scalable: none;
+}
+
+#head {
+    display: flex;  
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-around;
+    color: #808080;
+    height: 60px;
+    background-color: white; 
+    
+}
+
+
+
+#hb {
+    color: #808080;
+    font-size: 120%;
+    font-family: 'inter';
+    
+}
+.heade {
+    color: #808080;
+    font-size: 120%;
+    font-family: 'Inter';
+    position: sticky;
+    top: 0;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.prim {
+    margin: 0;
+}
+
+.pod {
+    margin: 0;
+}
+a:active,
+a:hover,  
+a {
+    background: transparent;
+    border: 0 ;
+    outline: 0 ;
+    text-decoration: none;
+}
+
+#ah {
+    color: #ffffff;
+    width: 200px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 30px;
+    background-color:#3FD1FF;
+}
+
+#nik {
+    display: flex;  
+    flex-direction: row;  
+    justify-content: space-around;
+    padding-top: 12%;
+    align-items: center;
+}
+
+#priv{
+    font-size: 400%;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Inter";
+}
+
+#dr {
+    color: #000000;
+    font-weight: 30%;
+    font-family: "Inter";
+    font-size: 300%;
+}
+
+#dr2 {
+    color: #000000;
+    font-weight: 30%;
+    font-family: "Inter";
+    font-size: 300%;
+}
+#texte {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+
+#ahe {
+    color: #ffffff;
+    width: 250px;
+    line-height: 75px;
+    text-align: center;
+    
+    border-radius: 30px;
+    background-color:#3FD1FF;
+    font-size: 36px;
+    margin-top: 6%;
+}
+
+#ni {
+    background-image: url("Group 5.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#iu {
+    margin-top: 3%;
+    text-align: center;
+}
+.func {
+    margin-top: 15%;
+}
+
+
+.pod {
+    background-image: url("4.svg");
+    background-repeat: no-repeat;
+}
+.podd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1%; /* Расстояние между ссылками */
+    display: flex; /* Расположение элементов ссылки в ряд */
+    flex-direction: row; /* Вертикальное расположение */
+    justify-content: space-around;
+    padding: 7%;
+    
+    
+  }
+
+  .podd a { 
+    text-align: center; /* Выравнивание текста по центру */
+    display: flex; /* Расположение элементов ссылки в ряд */
+    flex-direction: column; /* Вертикальное расположение */
+    justify-content: center; /* Выравнивание по вертикали */
+    align-items: center;
+    
+  }
+
+  .podd img {
+    margin: 0 auto; 
+    width: 50%;/* Выравнивание изображения по центру */
+  }
+  
+  .podd h1 {
+    margin: 0;
+    font-size: 26px;
+    color: white;
+    opacity: 100%;
+  }
+  
+  #tg {
+    width: 300px;
+    border-radius: 76px;
+    background-color: rgba(255, 255, 255, 0.17);
+    height: 300px;
+  }
+  #play {
+    width: 300px;
+    border-radius: 76px;
+    background-color: rgba(255, 255, 255, 0.17);
+    height: 300px;
+  }
+  #app {
+    width: 300px;
+    border-radius: 76px;
+    background-color: rgba(255, 255, 255, 0.17);
+    height: 300px;
+  }
+  #apl {
+    width: 300px;
+    border-radius: 76px;
+    background-color: rgba(255, 255, 255, 0.17);
+    height: 300px;
+  }
+  /* Стили для разных ссылок (необязательно) */
+  
+  @media screen and (max-width: 1374px)  {
+
+    #tg {
+        width: 200px;
+        height: 200px;
+    }
+    #play {
+        width: 200px;
+        height: 200px;
+
+    }
+    #apl {
+        width: 200px;
+        height: 200px;
+        
+    }
+    #app {
+        width: 200px;
+        height: 200px;
+        border-color:none !important;
+
+    }
+    .podd h1 {
+        margin: 0;
+        font-size: 20px;
+        color: white;
+        opacity: 100%;
+      }
+  }
+
+.tooltip {
+position: relative;
+display: inline-block;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 820%;
+background-color: #80dbff;
+opacity: 99%;
+color: white;
+text-align: center;
+font-weight: bold;
+border-radius: 15px;
+padding: 5px 0;
+border-color: antiquewhite;
+/* Позиционирование */
+position: absolute;
+z-index: 1;
+top: 130%; /* Изменено с bottom на top */
+left: 50%;
+margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+
+
+#te {
+    color:white;
+    text-align: center;
+    font-size: 64px;
+    padding-top: 7%;
+    font-weight: bold;
+}
