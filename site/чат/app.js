@@ -179,25 +179,35 @@ function sendMessage() {
 
         
 
-        const audioPromises = [];
+       const audioQueue = [];
+let isPlaying = false;
 
 // Обработчик сообщения WebSocket
 socket.onmessage = async function(event) {
     const blob = new Blob([event.data], { type: 'audio/wav' });
     const audioURL = URL.createObjectURL(blob);
 
-    // Создаём и добавляем новый промис в очередь
-    const newAudioPromise = async () => {
-        await playAudio(audioURL);
-    };
+    // Добавляем новое аудио в очередь
+    audioQueue.push(audioURL);
 
-    audioPromises.push(newAudioPromise);
-
-    // Если это первый элемент в очереди, начинаем воспроизведение
-    if (audioPromises.length === 1) {
-        await processQueue();
+    // Если ничего не воспроизводится, начинаем воспроизведение
+    if (!isPlaying) {
+        playNextAudio();
     }
 };
+
+// Функция для воспроизведения следующего аудио в очереди
+async function playNextAudio() {
+    if (audioQueue.length === 0) {
+        isPlaying = false;
+        return;
+    }
+
+    isPlaying = true;
+    const audioURL = audioQueue.shift();
+    await playAudio(audioURL);
+    playNextAudio();
+}
 
 // Функция для воспроизведения аудио
 async function playAudio(audioURL) {
@@ -208,14 +218,6 @@ async function playAudio(audioURL) {
         await new Promise(resolve => audio.onended = resolve); // Ждём окончания воспроизведения
     } catch (error) {
         console.error("Error playing audio:", error);
-    }
-}
-
-// Функция для обработки очереди
-async function processQueue() {
-    while (audioPromises.length > 0) {
-        const currentAudioPromise = audioPromises.shift();
-        await currentAudioPromise();
     }
 }
           
