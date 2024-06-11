@@ -134,7 +134,7 @@ function sendMessage() {
         userChatBubble.className = 'rmfn';
         userChatBubble.innerHTML = '<div class="rmfn"><div id="cap">ВЫ</div><div id="messe">' + userMessage + '</div><img src="101.svg" alt="user" width="57px" height="57px" id="mika"></div>';
         chatHistory.appendChild(userChatBubble);
-        const socket = new WebSocket('ws://192.168.1.102:452');
+        const socket = new WebSocket('ws://192.168.1.203:452');
 
         var nikaChatBubble = document.createElement('div');
         nikaChatBubble.innerHTML = '<div class="rmfn" ><div id="cap">НИКА</div><div id="messe"><div class="loading">Ника печатает...</div></div><img src="icon.svg" alt="nika" width="60px" height="60px" id="mika"></div>';
