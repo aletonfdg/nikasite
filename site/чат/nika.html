@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Nika</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="nika">
+        <div class="head">
+            <div class="weather">
+                <button id="why"><img src="icon.svg"  alt="nika" width="144px" height="144px" id="ic"></button>
+                <p id="dateDisplay" class="date"></p>
+                <input type="text" placeholder="Введите город" id="cityInput" size="10" value="" oninput="capitalizeFirstLetter()">
+                
+                <h4 id="temper"></h4>
+                <h4 id="icon"></h4>
+                <h4 id="description"></h4>
+                <h4 id="temper_f"></h4>
+                <h4 id="wind"></h4>
+                <img id="wi" src="">
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-history" id="chat-history">
+                <div class="mfn">
+                    <div id="cap">НИКА</div>
+                    <div id="messe">Здравствуйте, я Ника, голосовой помощник, слушаю вас.</div>
+                    <img src="icon.svg" alt="microphone" width="60px" height="60px" id="mika"> 
+                    
+                </div>
+            </div>
+            <div class="key">
+                <input title="a" id="keybord" onkeydown="if (event.keyCode == 13){sendMessage();} " contenteditable/>
+                <button id="micro" ><img src="icon.svg" alt="microphone" width="60px" height="57px" id="microphone"></button>
+            </div>
+        </div>
+        <h5 align="center" id="aut">© 2024 Автор проекта: V&V</h5>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</body>
+
+</html>

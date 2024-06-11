@@ -1,0 +1,251 @@
+.nika {
+    height: 797px;
+    width: 1139px;
+    position: relative;
+    background-image: url(1.svg);
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#dateDisplay {
+    font-size: 48px;
+    line-height: 0px;
+    font-family: sans-serif;
+    padding-left: 210px;
+    padding-top: 59px;
+    position: absolute;
+    top: 0;
+}
+
+#cityInput::placeholder {
+    color: white;
+    font-size: 40PX;
+    outline-width: thin;
+    font-style: italic;
+}
+
+#cityInput {
+    outline: 1 !important;
+    outline-color: white;
+    font-size: 48px;
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: left;
+    margin-right: 40px;
+    margin-top: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#description {
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-top: 38px;
+}
+
+#ic {
+    padding-left: 49px;
+    padding-top: 56px;
+}
+
+#temper {
+    font-size: 64px;
+    font-family: sans-serif;
+    padding-left: 180px;
+    margin-top: -40px;
+}
+
+#icon {
+    font-size: 90px;
+    padding-left: 297px;
+    margin-top: -188px;
+}
+
+#wind {
+    font-family: sans-serif;
+    font-size: 64px;
+    padding-left: 520px;
+    position: absolute;
+    top: 0;
+    padding-top: 80px;
+}
+
+#wi {
+    padding-left: 420px;
+    position: absolute;
+    top: 0;
+    border: none;
+    padding-top: 152px;
+}
+
+#description {
+    font-size: 32px;
+    font-family: sans-serif;
+    padding-left: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 129px;
+}
+
+#why {
+    outline: 0;
+    border: 0;
+    background: transparent;
+}
+
+#temper_f {
+    font-size: 32px;
+    font-family: sans-serif;
+    padding-left: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 205px;
+}
+
+.chat-history {
+    height: 450px;
+    flex: 1;
+    width: 1057px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 47px 47px 0 0;
+    box-shadow: 0px 0px 20px 5px rgb(102, 171, 180);
+    
+}
+
+
+
+
+/* Добавить красивый стилизованный скроллбар */
+
+
+
+
+/* Стилизация полосы прокрутки */
+
+
+
+
+/* Стилизация ползунка прокрутки */
+
+
+
+
+/* Стилизация фона полосы прокрутки */
+
+
+.key {
+    height: 70px;
+    width: 1057px;
+    border-radius: 0 0 47px 47px;
+    background-color: white;
+}
+
+.chat-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 41px;
+    padding-bottom: 28px;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+}
+
+.chat-container ::-webkit-scrollbar {
+    width: 17.5px;            /* ширина scrollbar */
+}
+.chat-container ::-webkit-scrollbar-track {
+    background: transparent; /* цвет дорожки */
+    border-radius: 30px; 
+    margin-top: 30px;       
+    align-items: left;
+}
+.chat-container ::-webkit-scrollbar-thumb {
+    background-color: rgb(143, 143, 233);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    
+       /* padding вокруг плашки */
+}
+
+#micro {
+    outline: 0;
+    border: 0;
+    background: transparent;
+}
+
+#keybord {
+    width: 921px;
+    border-radius: 44px;
+    background-color: #F2EDED;
+    outline: 0;
+    border: 0;
+    position: relative;
+    top: -20px;
+    font-size: 25px;
+    margin-left: 33px;
+    text-indent: 20px;
+    height: 40px;
+    resize: none;
+}
+
+#aut {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: -40px;
+}
+
+.mfn {
+    margin-left: 20px;
+    color: #808080;
+    
+}
+
+.rmfn {
+    color: #808080;
+    padding-left: 11px;
+}
+
+#messe {
+    margin-left: 74px;
+    font-size: 22px;
+    font-family: 'Inter';
+    display: block;
+}
+
+#chat-history {
+    overflow-x: hidden;
+}
+
+#mika {
+    top: -60px;
+    position: relative;
+}
+
+#cap {
+    font-size: 29px;
+    margin-left: 74px;
+    margin-top: 10px;
+    font-family: 'Inter';
+}
+
+#copy {
+    margin-left: 9px;
+    border: none;
+    outline: 0;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    outline: 0;
+}
