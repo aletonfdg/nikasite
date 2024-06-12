@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интеллектуальный ассистент Никита</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="n">
+    <div class="header">
+      <a href="#"><img src="image 19.svg" alt="Настройки" >Настройки</a>
+      <a href="#"><img src="pngwing 1 (1).svg" alt="Bluetooth" >Wi-Fi</a>
+      <a href="#"><img src="image 21.svg" alt="Персонализация">Персонализация</a>
+      <a href="#"><img src="image 22.svg" alt="Громкость" >Громкость</a>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" id="row">
+        <div id="l" class="l">
+          <button class="btn btn-primary btn-block menu-item" id='l1' onclick="showContent('weather')">·Погода</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('news')">·Новости</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('music')">·Музыка</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('search')">·Поиск</button>
+        </div>
+
+        <div class="col-md-8" id="content">
+          <div class="center-content">
+            <img alt="nika" src="Group 33 (1).svg" id="nika" height="400px">
+            <div id="te">Привет! Я - интеллектуальный оазис Ника.
+              Введите свой запрос или выберите из имеющихся!</div>
+          </div>
+        </div>
+
+        <div id="r" class="r">
+          <button class="btn btn-primary btn-block menu-item" id='l1' onclick="showContent('calendar')">·Календарь</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('notes')">·Заметки</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('alarm')">·Будильник</button>
+          <button class="btn btn-primary btn-block menu-item" id='la' onclick="showContent('notifications')">·Уведомления</button>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input type="text" >
+        <button type="submit"><img src='image 23.svg'><i class="fas fa-search"></i></button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js">
+    const searchBar = document.querySelector('.search-bar');
+    const searchInput = searchBar.querySelector('input[type="text"]');
+    const searchButton = searchBar.querySelector('button[type="submit"]');
+
+    searchButton.addEventListener('click', () => {
+    const searchQuery = searchInput.value;
+    // Обработайте поисковый запрос здесь
+    console.log(searchQuery);
+    });
+  </script>
+</body>
+</html>
